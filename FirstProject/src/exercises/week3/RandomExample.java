@@ -7,31 +7,29 @@ import java.util.Scanner;
  * user, and finds the number of elements which are divisible by 5. Put these
  * values into a new array.
  */
-public class Question4 {
+public class RandomExample {
 	public static void main(String[] args) {
-		Scanner in=new Scanner(System.in);
 		int count=0;
-		System.out.println("Enter the size of the array:");
-		int size=in.nextInt();
+		int size=100;
 		int[] numbers=new int[size];
-		System.out.println();
-	
+		
+		//Filling array with random numbers between [10,99]
 		for(int i=0;i<size;i++) {
-			System.out.println("Enter numbers["+i+"]:");
-			numbers[i]=in.nextInt();
-			if(numbers[i]%5==0) {
+			numbers[i]=(int)(Math.random()*90+10);
+			if(numbers[i]<50) {
 				count++;
 			}
 		}
 		int j=0;
 		int[] newArray=new int[count];
 		for (int i = 0; i < numbers.length; i++) {
-			if(numbers[i]%5==0) {
+			if(numbers[i]<50) {
 				newArray[j]=numbers[i];
 				System.out.println(newArray[j]);
 				j++;
 			}
 		}
+		System.out.println("Element count<50 is "+newArray.length);
 		
 	}
 
