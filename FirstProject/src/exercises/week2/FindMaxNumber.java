@@ -1,10 +1,12 @@
 package exercises.week2;
 
+import exercises.week4.BankAccount;
+
 public class FindMaxNumber {
 
 	public static void main(String[] args) {
 		int a=10, b=20, c=6;
-		
+		BankAccount acc;
 		//first way
 //		if(a>b && a>c) {
 //			System.out.println("Max:"+a);
