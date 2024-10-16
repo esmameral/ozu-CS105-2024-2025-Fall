@@ -7,31 +7,47 @@ public class BankAccount {
 	private double balance=100;
 	
 	public BankAccount() {
-		owner="Hasan";
+		this.owner="Hasan";
 	}
 	
 	public BankAccount(String ownerName) {
-		owner=ownerName;
+		this.owner=ownerName;
 	}
 	
 	public BankAccount(String ownerName, double balance, int accountId ) {
-		this.owner=ownerName;
+		
+		this(ownerName);//calls BankAccount(string) constructor
+//		this.owner=ownerName;
 		this.accountId=accountId;
 		this.balance=balance;
 	}
+	
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	private void setBalance(double balance) {
+		this.balance = balance;
+	}
+
 	public String getOwner() {
 		return owner;
 	}
 	
 	public int getAccountId() {
-		return accountId;
+		return this.accountId;
+	}
+	
+	public void setAccountId(int newId) {
+		this.accountId=newId;
 	}
 	public double getBalance() {
 		return balance;
 	}
 	
 	public void withdraw(double amount) {
-		balance=balance-amount;
+		//balance=balance-amount;
+		setBalance(balance-amount);
 	}
 	public void withdraw(double amount, double fee) {
 		balance=balance-amount-fee;
@@ -40,7 +56,18 @@ public class BankAccount {
 		balance=balance+amount;
 
 	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [owner=" + owner + ", accountId=" + accountId + ", balance=" + balance + "]";
+	}
+
 	
+	
+	
+//	public String toString() {
+//		return "Owner:"+this.owner+" ID:"+this.accountId+" Balance:"+this.balance;
+//	}
 }
 
 
