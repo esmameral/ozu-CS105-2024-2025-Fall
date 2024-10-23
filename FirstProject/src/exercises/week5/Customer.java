@@ -3,17 +3,31 @@ package exercises.week5;
 import java.util.Objects;
 
 public class Customer extends Object{
+	private static int count=0;
 	private int id;
 	private String name;
+	
+	public static int getCount() {
+		
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Customer.count = count;
+	}
+
+	
 
 	public Customer(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
+		Customer.count++;
 	}
 
 	public Customer() {
 		super();
+		Customer.count++;
 		
 	}
 	
