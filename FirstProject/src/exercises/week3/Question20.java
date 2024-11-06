@@ -8,7 +8,7 @@ public class Question20 {
 		int[] numbers= {1,4,3,5,9,2,0};
 		int value=5;
 		
-		String[] arr=findPairs(numbers,value);
+		String[] arr=findPairs(numbers,value); 
 		for(String aPair:arr) {
 			System.out.print(aPair);
 		}

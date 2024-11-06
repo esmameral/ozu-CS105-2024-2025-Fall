@@ -22,8 +22,6 @@ public class Test {
 		System.out.println(c3.equals(c4));
 		System.out.println(c4.equals(c5));
 		System.out.println(c5.equals(c6));
-		
-
 
 	}
 
