@@ -1,6 +1,6 @@
 package exercises.week7.question4;
 
-public class Person {
+public class Person extends Object{
 	private int id;
 	private String name;
 	private String address="ISTANBUL";
