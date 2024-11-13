@@ -10,8 +10,14 @@ public class BMW extends Car {
 //		return this.getColor()+" BMW";
 //	}
 
+//	public void sayHello() {
+//		System.out.println("Hello from BMW class");
+//	}
 	public BMW() {
+		
 		super();
+		System.out.println("BMW constructor executed");
+		
 	}
 
 //	public String getColor() {

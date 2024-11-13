@@ -8,8 +8,14 @@ package exercises.week7;
 
 public class Vehicle  {
 
+	
+//	public void sayHello() {
+//		System.out.println("Hello from Vehicle class");
+//	}
+	
 	public Vehicle() {
 		super();
+		System.out.println("Vehicle constructor executed");
 	}
 
 	public String getColor() {
