@@ -25,4 +25,22 @@ public class Car extends Vehicle {
 		return super.getColor()+ " Car";
 	}
 
+	@Override
+	public void doMaintenance() {
+		System.out.println("Car doMaintenance");
+		
+	}
+
+	@Override
+	public double getTaxRate() {
+		// TODO Auto-generated method stub
+		return 17;
+	}
+
+	@Override
+	public double getTaxAmount() {
+		// TODO Auto-generated method stub
+		return 2500;
+	}
+
 }

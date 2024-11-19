@@ -6,8 +6,9 @@
  */
 package exercises.week7;
 
-public class Vehicle  {
+public abstract class Vehicle  implements Taxable{
 
+	public abstract void doMaintenance();
 	
 //	public void sayHello() {
 //		System.out.println("Hello from Vehicle class");
