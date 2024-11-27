@@ -59,7 +59,7 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return " [x=" + x + ", y=" + y + ", color=" + color + ", numberOfDoors=" + numberOfDoors
+		return getClass().getSimpleName()+ " [x=" + x + ", y=" + y + ", color=" + color + ", numberOfDoors=" + numberOfDoors
 				+ ", numberOfTires=" + numberOfTires + "]";
 	}
 	
