@@ -24,6 +24,7 @@ public class SimpleCalculatorGUI extends JFrame {
 	 JButton divButton = new JButton("/");
 	 JLabel resultLbl = new JLabel("Result:");
 	 JTextField result = new JTextField();
+	 JButton clearButton = new JButton("Clear");
 
 	public SimpleCalculatorGUI() throws HeadlessException {
 		getContentPane().setLayout(null);
@@ -33,9 +34,13 @@ public class SimpleCalculatorGUI extends JFrame {
 		number2TextField.setBounds(260, 70, 70, 20);
 
 		addButton.setBounds(80, 130, 45, 20);
+		addButton.addActionListener(new ButtonListener(this));
 		subButton.setBounds(130, 130, 45, 20);
+		subButton.addActionListener(new ButtonListener(this));
 		mulButton.setBounds(180, 130, 45, 20);
+		mulButton.addActionListener(new ButtonListener(this));
 		divButton.setBounds(230, 130, 45, 20);
+		divButton.addActionListener(new ButtonListener(this));
 
 		getContentPane().add(labelNumber1);
 		getContentPane().add(number1TextField);
@@ -52,9 +57,24 @@ public class SimpleCalculatorGUI extends JFrame {
 		getContentPane().add(resultLbl);
 		getContentPane().add(result);
 
-		JLabel result = new JLabel("Result:");
-		result.setBounds(100, 170, 49, 20);
-		getContentPane().add(result);
+		
+		 resultLbl.setBounds(100, 170, 49, 20);
+		getContentPane().add(resultLbl);
+		
+		
+		
+		clearButton.setBounds(160, 211, 89, 23);
+		clearButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				number1TextField.setText("");
+				number2TextField.setText("");
+				result.setText("");
+				
+			}
+		});
+		getContentPane().add(clearButton);
 
 		setSize(400, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
